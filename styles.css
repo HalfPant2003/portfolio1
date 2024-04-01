@@ -43,9 +43,10 @@ nav {
 
 .left img {
     margin-top: -20px;
-    width: 120px;
-    height: 30px;
+    width: 320px;
+    height: 110px;
 }
+
 
 .right ul {
     display: flex;
