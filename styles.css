@@ -38,7 +38,6 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
     background-color: transparent;
     color: rgb(245, 248, 245);
     padding: 10px 0;
@@ -48,11 +47,11 @@ header {
 
 /* Hover state */
 header:hover {
-    background-image: linear-gradient(rgba(0, 150, 150, 0.4), rgba(14, 6, 37, 0.6)), url("images/bg/header-bg.jpg");
+    background-image: linear-gradient(rgba(0, 150, 150, 0.7), rgba(14, 6, 37, 0.6)),
+    url("images/bg/header-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(0, 150, 150, 0.4);
-    /* Fallback color */
 }
 
 
@@ -64,10 +63,8 @@ nav {
 
 
 .left img {
-    margin-top: -20px;
     width: 320px;
-    height: 110px;
-    margin-left: 150px;
+    height: auto;
 }
 
 .right {
@@ -87,7 +84,6 @@ nav {
 .nav-button {
     background-color: transparent;
     border: 2px solid transparent;
-    /* Transparent border initially */
     color: #fff;
     font-size: 16px;
     padding: 10px 15px;
@@ -99,17 +95,14 @@ nav {
 .nav-button:hover {
     color: #ccc;
     border-color: lightcyan;
-    /* Border color changes on hover */
     transform: translateY(-3px);
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-.menu-icon {
-    display: none;
-    /* Initially hide the menu icon */
+a{
+    text-decoration: none;
+    color: white;
 }
-
 /*First Section*/
 
 .firstSection {
@@ -356,18 +349,6 @@ h1 {
 }
 
 
-
-
-
-/*fourth section*/
-
-/*
-.fourthSection {
-    margin: 50px auto;
-    text-align: center;
-}
-*/
-
 .fourthSection {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -567,19 +548,21 @@ h1 {
 /*contact-me.html*/
 
 .contact-me-section {
-    height: 770px;
+    height: auto;
     justify-content: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/bg/contact-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 170px;
-    margin-top: -120px;
+    padding-top: 250px;
+    padding-bottom: 50px;
+    margin-top: -200px;
 }
 
 
 .contact-container {
     background-color: rgba(218, 209, 209, 0.6);
     height: 550px;
+    width: auto;
     margin-right: 200px;
     margin-left: 200px;
     padding-top: 80px;
@@ -683,49 +666,6 @@ h1 {
     text-shadow: 0 0 10px rgb(117, 122, 117);
 }
 
-/* Style the container */
-.s-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.services-card {
-    width: 30%;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    transition: transform 0.3s ease-in-out;
-}
-
-.services-card:hover {
-    transform: translateY(-5px);
-}
-
-.services-card img {
-    width: 100%;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 1.5rem;
-}
-
-.card-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.card-content p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: 1.5rem;
-}
-
 .btn {
     display: inline-block;
     background-color: #007bff;
@@ -750,52 +690,29 @@ h1 {
     }
 
     .left img {
-        width: 250px;
+        width: 100px;
         height: auto;
+        margin-top: auto;
         margin-left: 15px;
     }
-
-    .right {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
+    header{
         width: 100%;
-        background-color: rgb(11, 17, 66);
-        padding: 10px 0;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
     }
-
+    .nav-button{
+        font-size: 10px;
+    }
     .right ul {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
-
-    .right li {
-        margin: 10px 0;
-    }
-
-    .nav-button {
-        width: 80%;
-        text-align: center;
-    }
-
-    .nav-button:hover {
-        transform: translateY(0);
-        box-shadow: none;
-    }
-
-    .nav-button:focus {
-        outline: flex;
-    }
-
-    .menu-icon {
         display: flex;
+        flex-direction: column;
+        column-gap: 10px;
+    }
+    .right {
+        justify-items: right;
+        
     }
 
+
+    /*first section*/
     .firstSection {
         flex-direction: column;
         align-items: center;
@@ -823,48 +740,38 @@ h1 {
 
     .about-section {
         padding: 30px;
-        /* Adjust padding to create more space on smaller screens */
     }
 
     .about-section .container {
         height: auto;
-        /* Allow container height to adjust automatically */
         flex-direction: column;
-        /* Stack container items vertically on smaller screens */
     }
 
     .about-section .photo,
     .about-section .writings {
         width: 100%;
-        /* Take full width on smaller screens */
         padding: 0 20px;
-        /* Add horizontal padding for better spacing */
         text-align: center;
-        /* Center align content */
     }
 
     .about-section .photo {
         padding: 0;
-        /* Remove left padding for the photo */
         margin-bottom: 20px;
         margin-top: 40px;
     }
 
     .photo img {
         width: 150px;
-        /* Adjust image size for better fit on smaller screens */
         height: 150px;
         border-radius: 50%;
     }
 
     .about-section h2 {
         font-size: 30px;
-        /* Reduce font size for the heading */
     }
 
     .about-section p {
         font-size: 16px;
-        /* Reduce font size for the paragraph */
     }
 
     /*second section*/
@@ -888,9 +795,14 @@ h1 {
     }
 
     .card-body {
-        width: 100%;
+        margin-top: 30px;
+        width: 70%;
         height: auto;
         padding: 1.5rem;
+    }
+    .card-body:hover{
+        width: 70%;
+        height: auto;
     }
 
     .card-title {
@@ -947,9 +859,11 @@ h1 {
         font-size: 15px;
     }
 
+
+
     /*fourth section*/
     .fourthSection {
-        margin: 20px auto;
+        padding:30px auto;
     }
 
     .verticle-line {
@@ -962,15 +876,17 @@ h1 {
 
 
     .project-cards {
-
-        justify-content: center;
-        width: 70%;
+        margin-left: auto;
+        margin-right:auto;
+        margin-top: 50px;
+        justify-content: left;
+        width: 75%;
         height: auto;
 
     }
 
     .project-cards:hover {
-        width: 70%;
+        width: 75%;
         height: auto;
 
     }
@@ -980,13 +896,13 @@ h1 {
     }
 
     .left-card img {
-
         width: 100%;
         height: auto;
+        padding-right: 40px;
     }
 
     .left-card img:hover {
-
+        transform: translateX(15px) translateY(60px) scale(1.8);
         width: 100%;
         height: auto;
     }
@@ -1006,13 +922,64 @@ h1 {
     }
 
     .message-card {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 20px;
+        width: 50%;
+        height: auto;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top: 30px;
     }
 
 
+    /*contact me*/
+    .contact-me-section{
+        padding-top: 200px;
+    }
+    .contact-container {
+        margin-right: 20px; /* Reduce right margin */
+        margin-left: 20px; /* Reduce left margin */
+        padding-top: 50px; /* Reduce top padding */
+        height: auto; /* Allow the container height to adjust based on content */
+    }
 
+    .contact-me-section {
+        padding-top: 150px; /* Adjust top padding */
+        padding-bottom: 20px; /* Reduce bottom padding */
+    }
+
+    .contact-icons>div {
+        flex-direction: column; /* Stack icons and text vertically */
+        margin-bottom: 20px; /* Increase margin between icon-text pairs */
+    }
+
+    .contact-me-section h4 {
+        font-size: 18px; /* Reduce font size for smaller screens */
+    }
+
+
+    /*services*/
+    .facility-container1,
+    .facility-container2 {
+        width: 100%; /* Make the containers full width on smaller screens */
+        height: auto; /* Allow the height to adjust based on content */
+    }
+
+    .facility-container1,
+    .facility-container2,
+    .around-container1,
+    .around-container2 {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .around-container2 {
+        justify-content: left; /* Adjust alignment for smaller screens */
+    }
+
+    .facilities h1,
+    .facilities h3,
+    .facilities p {
+        font-size: 18px; /* Reduce font size for smaller screens */
+    }
+    
     /*footer*/
     .footer-content {
         flex-direction: column;

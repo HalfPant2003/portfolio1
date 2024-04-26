@@ -21,19 +21,21 @@
     <header>
         <nav>
             <div class="left">
-                <img src="images/logo.png" alt="">
+                <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
             </div>
             <div class="right">
-                <ul>
-                    <li><a href="index.html"><button type="button" class="nav-button">Home</button></a></li>
-                    <li><a href="services.html"><button type="button" class="nav-button">Services</button></a></li>
-                    <li><a href="contact-me.html"><button type="button" class="nav-button">Contact Me</button></a></li>
-                    <li><a href="project.html"><button type="button" class="nav-button">Projects</button></a></li>
-                    <li><button type="button" class="menu-icon" onclick="toggleOffcanvas()">&#9776;</button></li>
+                <ul class="nav-links">
+                    <li><button class="nav-button"><a href="index.html">Home</a></button></li>
+                    <li><button class="nav-button"><a href="services.html">Services</a></button></li>
+                    <li><button class="nav-button"><a href="contact-me.html">Contact Me</a></button></li>
+                    <li><button class="nav-button"><a href="project.html">Projects</a></button></li>
                 </ul>
             </div>
         </nav>
     </header>
+    
+    
+
 
     <main>
         <section class="firstSection" id="home">
@@ -64,7 +66,8 @@
                 </div>
                 <div class="writings">
                     <h2>About <span style="color: black;">Me</span></h2>
-                    <p>Hey there! I'm <b>Aditya Raj Singh</b>, a Kolkata-based <b>Web developer</b> and Computer Science graduate from St. Xavier's College, Kolkata.
+                    <p>Hey there! I'm <b>Aditya Raj Singh</b>, a Kolkata-based <b>Web developer</b> and Computer Science
+                        graduate from St. Xavier's College, Kolkata.
                         Passionate about Front-End Web Development, I specialize in HTML, CSS, and JavaScript.<br>
                         With a knack for crafting immersive web experiences, I've brought numerous projects to life,
                         each showcasing my dedication to innovation and creativity.<br>
@@ -347,9 +350,11 @@
             </div>
 
 
-            <a href="project.html" style="text-decoration: none;"><div class="message-card">
-                <h4 class="right-card-title" style="margin-top: 10px; margin-bottom: 0;">VIEW MORE</h4>
-            </div></a>
+            <a href="project.html" style="text-decoration: none;">
+                <div class="message-card">
+                    <h4 class="right-card-title" style="margin-top: 10px; margin-bottom: 0;">VIEW MORE</h4>
+                </div>
+            </a>
         </section>
     </main>
 
@@ -361,14 +366,13 @@
                     <div class="social-icons">
                         <a href="mailto:aditya10singhjji@gmail.com" class="social-icon"><i class="fa fa-envelope"
                                 aria-hidden="true"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=100007151048281&mibextid=ZbWKwL" class="social-icon"><i class="fa fa-facebook"
-                                aria-hidden="true"></i></a>
-                        <a href="https://www.instagram.com/_half_pant_?igsh=MTE1bmVycmh6bGJt" class="social-icon"><i class="fa fa-instagram"
-                                aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100007151048281&mibextid=ZbWKwL"
+                            class="social-icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/_half_pant_?igsh=MTE1bmVycmh6bGJt" class="social-icon"><i
+                                class="fa fa-instagram" aria-hidden="true"></i></a>
                         <a href="https://wa.me/8240341337" class="social-icon"><i class="fa fa-whatsapp"
                                 aria-hidden="true"></i></a>
-                        <a href="tel:8240341337" class="social-icon"><i class="fa fa-phone" 
-                            aria-hidden="true"></i></a>
+                        <a href="tel:8240341337" class="social-icon"><i class="fa fa-phone" aria-hidden="true"></i></a>
 
                     </div>
                 </div>
@@ -402,6 +406,8 @@
             var offcanvas = document.querySelector('.right');
             offcanvas.classList.toggle('show');
         }
+
+
 
     </script>
 
